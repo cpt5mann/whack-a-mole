@@ -25,7 +25,7 @@ To complete Part I, fulfill the following requirements:
 * JS file
 * Assets folder (from repo)
 3. Link all of your files correctly.
-
+ 
 ---
 
 ### Part II HTML
