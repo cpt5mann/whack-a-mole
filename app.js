@@ -1,48 +1,49 @@
-window.onload = function () {
-    var dirt = document.getElementsByClassName("dirt");
-    var sound = document.getElementById("sound");
-    var grid = document.getElementById("dirt-box");
-
-
-    for (i = 0; i < dirt.length; i++) {
-        dirt[i].addEventListener("click", function () {
-            if(dirt.innerHTML="mole"){
-dirt.innerHTML="";
-sound.play();
-            }else{
-            
-                console.log("Nothing here, boi");
-               
-            }
-
-
-        })
-
-
-    };
-
-
-
+window.onload = function() {
+        var dirt = document.getElementsByClassName("dirt");
+        var sound = document.getElementById("sound");
+        var grid = document.getElementById("dirt-box");
+        var score=document.getElementById("score");
+        var whacks=document.getElementById("whacks");
     
-
-    function setMole() {
-        var mole = document.createElement("div");
-mole.id="mole";
-       
-var randomnum = Math.floor(Math.random(0, dirt.length))
         
+        for(let i = 0; i < dirt.length; i++){
+            dirt[i].addEventListener("click", function(){
+                if(dirt[i].innerHTML){
+                sound.play();
+                dirt[i].innerHTML = "";
+                } else {
+                    console.log("Nothing is in there!");
 
-        if(moles[randomnumber].innerHTML = "") {
-            dirt.innerHTML = "mole";
-        } else {
-            console.log("Too many moles");
+                }
+            })
         }
+        var num=10;
 
-    }
+        function setMole(){
+            var random = Math.floor((Math.random() * Math.floor(dirt.length)));
+            var mole = document.createElement("div");
+            
+            mole.setAttribute("class", "mole");
+            if(dirt[random].innerHTML === ""){
+                dirt[random].appendChild(mole);
+            } else {
+                console.log("There are too many moles");
+                num=num-1;
+                score.innerHTML=num;
+}
+        }        
+function checkloss(){
+if(score.innerHTML <= "0"){
+    alert("You lose. Refresh to play again.")
+}else{
+    console.log("still alive");
+}
+}
+checkloss();
 
 
-
-setInterval(setMole(), 3000);
-
-
+        
+        
+        setInterval(setMole, 1000);
+        
 }

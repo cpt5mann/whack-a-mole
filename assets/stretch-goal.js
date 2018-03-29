@@ -14,7 +14,7 @@ window.onload = function() {
   // Store the row2-container
   var
 
-  for (let i = 0; i < dirt.length; i++) {
+   for (let i = 0; i < dirt.length; i++) {
     dirt[i].addEventListener('click', function() {
       if (dirt[i].innerHTML) {
         sound.play();
