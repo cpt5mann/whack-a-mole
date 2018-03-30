@@ -4,8 +4,11 @@ window.onload = function() {
         var grid = document.getElementById("dirt-box");
         var score=document.getElementById("score");
         var whacks=document.getElementById("whacko");
-    
+
+
         var numwhacks=1;
+
+
 
         for(let i = 0; i < dirt.length; i++){
             dirt[i].addEventListener("click", function(){
@@ -24,7 +27,7 @@ window.onload = function() {
 
         function setMole(){
             var random = Math.floor((Math.random() * Math.floor(dirt.length)));
-           var random2=Math.floor((Math.random() * 20 +1));
+           var random2=Math.floor((Math.random() * 15 +1));
             var mole = document.createElement("div");
             
             mole.setAttribute("class", "mole");

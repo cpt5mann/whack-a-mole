@@ -94,12 +94,17 @@ font-size: 70px;
 text-align: left;
 margin-left:180px;
 font-size:50px;
+color:red;
 }
 
 
 .infoz{
 margin-top: 50px;
-color:black;
+color:red;
 
+}
+
+body{
+    background: linear-gradient(black,  rgb(127, 204, 51))
 }
 
